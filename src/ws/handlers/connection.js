@@ -1,4 +1,4 @@
-import { textMessageHandler } from "./messageHandlers.js";
+import { textMessageHandler } from "./message.js";
 
 const webSocketConnectionHandler = (ws) => {
   ws.on("message", textMessageHandler(ws));
