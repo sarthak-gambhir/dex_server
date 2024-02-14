@@ -1,0 +1,82 @@
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 400;
+}
+
+.form {
+  padding: 16px;
+}
+.form .form-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+.form .form-field input {
+  padding: 4px;
+  height: 32px;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+button {
+  padding: 4px 8px;
+  border-radius: 4px;
+  display: block;
+}
+
+input#connection-url-input {
+  padding: 4px;
+  height: 32px;
+  border-radius: 4px;
+  font-size: 16px;
+}
+#connection-management-container {
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+}
+#connection-status-value,
+#connect-websocket-button {
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+.status-connected {
+  background-color: chartreuse;
+}
+
+.status-disconnected {
+  background-color: firebrick;
+}
+
+#message-list-container {
+  padding: 16px;
+}
+
+#message-list {
+  margin: 0;
+  padding: 16px;
+  border-radius: 8px;
+  background-color: gainsboro;
+  box-shadow: 0 0 4px 0 #000034 inset;
+  border: 1px solid black;
+  display: flex;
+  gap: 16px;
+  flex-direction: column;
+  max-height: 600px;
+  overflow-y: auto;
+}
+
+#message-list li.message {
+  list-style: none;
+  background-color: palegreen;
+  box-shadow: 0 0 4px 0px darkolivegreen;
+  border-radius: 4px;
+  padding: 8px;
+  font-size: 18px;
+  font-style: italic;
+  margin: 0;
+}
