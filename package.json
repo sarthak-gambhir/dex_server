@@ -2,16 +2,20 @@
   "name": "dex_server",
   "version": "1.0.0",
   "type": "module",
-  "main": "index.js",
+  "main": "index.socketio.js",
   "license": "MIT",
   "dependencies": {
+    "socket.io": "^4.7.4",
     "ws": "^8.16.0"
   },
   "scripts": {
-    "start": "node index.js",
-    "dev:server": "nodemon index.js",
-    "dev:client": "yarn http-server client/dummy",
-    "dev": "yarn dev:client & yarn dev:server"
+    "start": "node index.socketio.js",
+    "dev:ws:server": "nodemon index.ws.js",
+    "dev:ws:client": "yarn http-server client/ws",
+    "dev:ws": "yarn dev:ws:client & yarn dev:ws:server",
+    "dev:io:server": "nodemon index.socketio.js",
+    "dev:io:client": "yarn http-server client/socketio",
+    "dev:io": "yarn dev:io:client & yarn dev:io:server"
   },
   "devDependencies": {
     "http-server": "^14.1.1",

@@ -1,5 +1,5 @@
 import { WebSocket, WebSocketServer } from "ws";
-import webSocketConnectionHandler from "./handlers/connectionHandler.js";
+import webSocketConnectionHandler from "./handlers/connection.js";
 
 const getWebSocketServer = (serverConfig = {}) => {
   const wss = new WebSocketServer(serverConfig);
